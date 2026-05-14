@@ -1,0 +1,51 @@
+
+
+Working Directory = /home/icd17/23BVD1040/genus_rak/Genus_CUI_RAK/LAB2
+QoS Summary for dtmf_recvr_core
+=========================================================================================================
+Metric                          generic         map             syn_opt         syn_opt_low_incr final          
+=========================================================================================================
+Slack (ps):                     7,413           1,302             635             635             635
+  R2R (ps):                     9,088           1,302             635             635             635
+  I2R (ps):                     7,413           7,190           7,190           7,190           7,190
+  R2O (ps):                    15,248          14,928          15,170          15,170          15,170
+  I2O (ps):                  no_value        no_value        no_value        no_value        no_value
+  CG  (ps):                  no_value          15,604          15,604          15,604          15,604
+TNS (ps):                           0               0               0               0               0
+  R2R (ps):                         0               0               0               0               0
+  I2R (ps):                         0               0               0               0               0
+  R2O (ps):                         0               0               0               0               0
+  I2O (ps):                  no_value        no_value        no_value        no_value        no_value
+  CG  (ps):                  no_value               0               0               0               0
+Failing Paths:                      0               0               0               0               0
+Cell Area:                    219,965         232,840         232,696         232,696         232,696
+Total Cell Area:              219,965         232,840         232,696         232,696         232,696
+Leaf Instances:                 9,428           4,622           4,551           4,551           4,551
+Total Instances:                9,428           4,622           4,551           4,551           4,551
+Utilization (%):                 0.00            0.00            0.00            0.00            0.00
+Tot. Net Length (um):        no_value        no_value        no_value        no_value        no_value
+Avg. Net Length (um):        no_value        no_value        no_value        no_value        no_value
+Route Overflow H (%):        no_value        no_value        no_value        no_value        no_value
+Route Overflow V (%):        no_value        no_value        no_value        no_value        no_value
+MBCI(%) (bits/gate) :            0.00            0.00            0.00            0.00            0.00
+Norm Cong Hotspot Area:
+  Max Cong:                  no_value        no_value        no_value        no_value        no_value
+  Tot Cong:                  no_value        no_value        no_value        no_value        no_value
+=========================================================================================================
+CPU  Runtime (h:m:s):        00:30:54        00:30:45        00:30:03        00:30:01        00:30:01
+Real Runtime (h:m:s):        00:31:25        00:30:30        00:30:03        00:30:02        00:30:01
+CPU  Elapsed (h:m:s):        00:30:57        00:31:42        00:31:45        00:31:46        00:31:47
+Real Elapsed (h:m:s):        00:31:26        00:31:56        00:31:59        00:32:01        00:32:02
+Memory (MB):                  1737.93         1741.95         1741.77         1733.59         1743.59
+=========================================================================================================
+=========================================================================================================
+Flow Settings:
+=========================================================================================================
+Total Runtime (h:m:s): 00:32:02
+Total Memory (MB):     1743.59
+Executable Version:    21.14-s082_1
+=========================================================================================================
+Total Cell Area =  Cell Area + Physical Cell Area
+Total Instances =  Leaf Instances + Physical Instances
+
+

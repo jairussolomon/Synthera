@@ -1,0 +1,51 @@
+
+
+Working Directory = /home/icd17/23BVD1040/genus_rak/Genus_CUI_RAK/LAB1
+QoS Summary for dtmf_recvr_core
+==========================================================================================
+Metric                          generic         map             syn_opt         final          
+==========================================================================================
+Slack (ps):                     7,494           1,658             844             844
+  R2R (ps):                     9,220           1,658             844             844
+  I2R (ps):                     7,494           7,274           7,274           7,274
+  R2O (ps):                    15,248          15,148          15,148          15,148
+  I2O (ps):                  no_value        no_value        no_value        no_value
+  CG  (ps):                  no_value          15,678          15,678          15,678
+TNS (ps):                           0               0               0               0
+  R2R (ps):                         0               0               0               0
+  I2R (ps):                         0               0               0               0
+  R2O (ps):                         0               0               0               0
+  I2O (ps):                  no_value        no_value        no_value        no_value
+  CG  (ps):                  no_value               0               0               0
+Failing Paths:                      0               0               0               0
+Cell Area:                    219,965         231,061         230,966         230,966
+Total Cell Area:              219,965         231,061         230,966         230,966
+Leaf Instances:                 9,423           4,189           4,145           4,145
+Total Instances:                9,423           4,189           4,145           4,145
+Utilization (%):                 0.00            0.00            0.00            0.00
+Tot. Net Length (um):        no_value        no_value        no_value        no_value
+Avg. Net Length (um):        no_value        no_value        no_value        no_value
+Route Overflow H (%):        no_value        no_value        no_value        no_value
+Route Overflow V (%):        no_value        no_value        no_value        no_value
+MBCI(%) (bits/gate) :            0.00            0.00            0.00            0.00
+Norm Cong Hotspot Area:
+  Max Cong:                  no_value        no_value        no_value        no_value
+  Tot Cong:                  no_value        no_value        no_value        no_value
+==========================================================================================
+CPU  Runtime (h:m:s):        00:30:52        00:30:47        00:30:06        00:30:00
+Real Runtime (h:m:s):        00:32:15        00:30:32        00:30:07        00:30:00
+CPU  Elapsed (h:m:s):        00:30:55        00:31:42        00:31:48        00:31:49
+Real Elapsed (h:m:s):        00:32:16        00:32:48        00:32:55        00:32:55
+Memory (MB):                  1737.03         1740.10         1738.92         1746.93
+==========================================================================================
+==========================================================================================
+Flow Settings:
+==========================================================================================
+Total Runtime (h:m:s): 00:32:55
+Total Memory (MB):     1746.93
+Executable Version:    21.14-s082_1
+==========================================================================================
+Total Cell Area =  Cell Area + Physical Cell Area
+Total Instances =  Leaf Instances + Physical Instances
+
+

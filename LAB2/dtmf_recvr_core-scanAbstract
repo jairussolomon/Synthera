@@ -1,0 +1,40 @@
+#Writing out dft_controllable
+proc ::dft_controllable_proc { inst } {
+    define_test_mode -active low [::legacy::find $inst -maxdepth 2 -pin -$::nvs::hpin scan_out[2]]
+    define_test_mode -active low [::legacy::find $inst -maxdepth 2 -pin -$::nvs::hpin scan_out[1]]
+    define_test_mode -active low [::legacy::find $inst -maxdepth 2 -pin -$::nvs::hpin scan_out[0]]
+    define_test_mode -active low [::legacy::find $inst -maxdepth 2 -pin -$::nvs::hpin switch_en_out]
+    set inst_name [::legacy::get_attribute full_name $inst]
+    ::legacy::set_attribute dft_controllable "[::legacy::find $inst_name -maxdepth 2 -pin -$::nvs::hpin Avdd] non_inverting" [::legacy::find $inst_name -maxdepth 2 -pin -$::nvs::hpin Avdd]
+    set inst_name [::legacy::get_attribute full_name $inst]
+    ::legacy::set_attribute dft_controllable "[::legacy::find $inst_name -maxdepth 2 -pin -$::nvs::hpin Avss] non_inverting" [::legacy::find $inst_name -maxdepth 2 -pin -$::nvs::hpin Avss]
+    set inst_name [::legacy::get_attribute full_name $inst]
+    ::legacy::set_attribute dft_controllable "[::legacy::find $inst_name -maxdepth 2 -pin -$::nvs::hpin VSS] non_inverting" [::legacy::find $inst_name -maxdepth 2 -pin -$::nvs::hpin VSS]
+    set inst_name [::legacy::get_attribute full_name $inst]
+    ::legacy::set_attribute dft_controllable "[::legacy::find $inst_name -maxdepth 2 -pin -$::nvs::hpin VDD_TDSPCore_R] non_inverting" [::legacy::find $inst_name -maxdepth 2 -pin -$::nvs::hpin VDD_TDSPCore_R]
+    set inst_name [::legacy::get_attribute full_name $inst]
+    ::legacy::set_attribute dft_controllable "[::legacy::find $inst_name -maxdepth 2 -pin -$::nvs::hpin VDD_AO] non_inverting" [::legacy::find $inst_name -maxdepth 2 -pin -$::nvs::hpin VDD_AO]
+}
+
+set_dft_functions_from_proc -subdesign dtmf_recvr_core -function dft_controllable_proc
+
+define_test_bus_port -name se -module dtmf_recvr_core -active high -function shift_enable -default -index 0 scan_en
+define_test_bus_port -name tm -module dtmf_recvr_core -active high -function test_mode -index 0 test_mode
+define_test_bus_port -name reset -module dtmf_recvr_core -active low -function async_set_reset -index 0 reset
+define_test_bus_port -name spi_fs -module dtmf_recvr_core -active low -function async_set_reset -index 1 spi_fs
+define_test_bus_port -name scanclk -module dtmf_recvr_core -active high -function test_clock -index 0 scan_clk
+ 
+# writing abstract model for 1 scan chain
+ 
+  define_scan_abstract_segment -module dtmf_recvr_core \
+    -name dtmf_recvr_core_top_chain \
+    -sdi scan_in_1 -sdo scan_out_2 \
+    -shift_enable_port scan_en -active high \
+    -test_mode_port test_mode -test_mode_active high \
+    -test_mode_port reset -test_mode_active low \
+    -test_mode_port spi_fs -test_mode_active low \
+    -clock_port scan_clk -fall \
+    -tail_clock_port scan_clk -tail_edge_rise \
+    -tail_inversion \
+    -length 517 
+ 
